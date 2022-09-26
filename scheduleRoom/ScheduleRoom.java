@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.Map.Entry;
 
 public class ScheduleRoom   {
@@ -14,7 +15,7 @@ public void showTimeSlots() {
 	
 	System.out.println("\n --->>> Book Your Session <<<---");
 
-	HashMap<Integer, String> hm1 = new HashMap<>();
+	TreeMap<Integer, String> hm1 = new TreeMap<>();
 
 	hm1.put(1, "Session A: 10.00am - 04.00pm");
 	hm1.put(2, "Session B: 04.00pm - 10.00pm");
@@ -33,7 +34,7 @@ public void showTimeSlots() {
 	case 1: {
 		System.out.println("--->>> Book Your Time <<<---");
 		
-		HashMap<Integer, String> hm2 = new HashMap<>();
+		TreeMap<Integer, String> hm2 = new TreeMap<>();
 		hm2.put(1, "  10.00am - 11.00am");
 		hm2.put(2, "  11.00am - 12.00pm");
 		hm2.put(3, "  01.00pm - 02.00pm");
@@ -54,16 +55,13 @@ public void showTimeSlots() {
 
 		case 1: {
 			System.out.println("Your Slot Has Been Booked..." + hm2.get(1));
-			
-			 System.out.println(srd.equals(hm2.remove(hm2.get(1))));
+			hm2.remove(1);
 			System.out.println("\n Available Slots: \n");
 			
 			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
 			{
 				System.out.println( serial.getKey() + " " + serial.getValue());
-			}
-			
-			
+			}		
 
 		}
 		
@@ -72,60 +70,63 @@ public void showTimeSlots() {
 		case 2: {
 			System.out.println("Your Slot Has Been Booked..." + hm2.get(2));
 			hm2.remove(2);
-
-//			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			System.out.println("\n Available Slots: \n");
+			
+			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 		case 3: {
 			System.out.println("Your Slot Has Been Booked..." + hm2.get(3));
 			hm2.remove(3);
+			System.out.println("\n Available Slots: \n");
 
-//			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 		case 4: {
 			System.out.println("Your Slot Has Been Booked..." + hm2.get(4));
 			hm2.remove(4);
+			System.out.println("\n Available Slots: \n");
 
-//			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 		case 5: {
 			System.out.println("Your Slot Has Been Booked..." + hm2.get(5));
 			hm2.remove(5);
 
-//			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 
 		default: {
 			System.out.println("Invalid Entry.. \n Please Try Again");
 			
-//			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm2.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 		}
-
+		
 	}
 		break;
 	case 2: {
 		System.out.println("--->>> Book Your Time <<<---");
 		
-		HashMap<Integer, String> hm3 = new HashMap<>();
+		TreeMap<Integer, String> hm3 = new TreeMap<>();
 		hm3.put(1, "  04.00pm - 05.00pm");
 		hm3.put(2, "  05.00pm - 06.00pm");
 		hm3.put(3, "  07.00pm - 08.00pm");
@@ -148,10 +149,10 @@ public void showTimeSlots() {
 			System.out.println("Your Slot Has Been Booked..." + hm3.get(1));
 			hm3.remove(1);
 
-//			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 
 		}
 			break;
@@ -159,49 +160,49 @@ public void showTimeSlots() {
 			System.out.println("Your Slot Has Been Booked..." + hm3.get(2));
 			hm3.remove(2);
 
-//			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 		case 3: {
 			System.out.println("Your Slot Has Been Booked..." + hm3.get(3));
 			hm3.remove(3);
 
-//			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 		case 4: {
 			System.out.println("Your Slot Has Been Booked..." + hm3.get(4));
 			hm3.remove(4);
 
-//			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 		case 5: {
 			System.out.println("Your Slot Has Been Booked..." + hm3.get(5));
 			hm3.remove(5);
 
-//			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//			}
+			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+			}
 		}
 			break;
 
 		default: {
 			System.out.println("Invalid Entry.. \n Please Try Again");
-//			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
-//			{
-//				System.out.println(serial.getKey() + " " + serial.getValue());
-//				}
+			for (Entry<Integer, String> serial : hm3.entrySet()) // For Iteration
+			{
+				System.out.println(serial.getKey() + " " + serial.getValue());
+				}
 			}
 		}
 	} 
@@ -210,18 +211,15 @@ public void showTimeSlots() {
 		System.out.println("Invalid Entry.. \n Please Try Again \n");
 		}
 		}
-	
 	}
-void availablitySlot() {
-	HashMap<Integer, String> hm4 = new HashMap<>();
-	
-}
 
 	public static void main(String[] args) {
 
 		while (true) {
+			
 			ScheduleRoom sr = new ScheduleRoom();
 			sr.showTimeSlots();
+			
 		}
 //		ScheduleRoom sr = new ScheduleRoom();
 //		sr.showTimeSlots();
