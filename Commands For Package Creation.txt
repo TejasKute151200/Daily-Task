@@ -1,0 +1,165 @@
+Microsoft Windows [Version 10.0.19044.2130]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\hp>cd Desktop
+
+C:\Users\hp\Desktop>cd Package
+
+C:\Users\hp\Desktop\Package>javac c1.java
+c1.java:3: error: '{' expected
+class c1(){
+        ^
+1 error
+
+C:\Users\hp\Desktop\Package>javac c1.java
+c1.java:7: error: cannot find symbol
+public static void main(string args[]){
+                        ^
+  symbol:   class string
+  location: class c1
+1 error
+
+C:\Users\hp\Desktop\Package>javac c1.java
+c1.java:7: error: cannot find symbol
+public static void main(string[] args){
+                        ^
+  symbol:   class string
+  location: class c1
+1 error
+
+C:\Users\hp\Desktop\Package>javac C1.java
+C1.java:3: error: '{' expected
+class C1(){
+        ^
+1 error
+
+C:\Users\hp\Desktop\Package>javac C1.java
+C1.java:7: error: cannot find symbol
+public static void main(string args[]){
+                        ^
+  symbol:   class string
+  location: class C1
+C1.java:8: error: cannot find symbol
+c1 obj = new c1();
+^
+  symbol:   class c1
+  location: class C1
+C1.java:8: error: cannot find symbol
+c1 obj = new c1();
+             ^
+  symbol:   class c1
+  location: class C1
+3 errors
+
+C:\Users\hp\Desktop\Package>javac C1.java
+C1.java:7: error: cannot find symbol
+public static void main(string args[]){
+                        ^
+  symbol:   class string
+  location: class C1
+1 error
+
+C:\Users\hp\Desktop\Package>javac C1.java
+C1.java:7: error: cannot find symbol
+public static void main(string[] args){
+                        ^
+  symbol:   class string
+  location: class C1
+1 error
+
+C:\Users\hp\Desktop\Package>javac C1.java
+
+C:\Users\hp\Desktop\Package>javac -d . C1.java
+
+C:\Users\hp\Desktop\Package>javac -d .. C1.java
+
+C:\Users\hp\Desktop\Package>cd p1
+
+C:\Users\hp\Desktop\Package\p1>java C1
+Error: Could not find or load main class C1
+Caused by: java.lang.NoClassDefFoundError: p1/C1 (wrong name: C1)
+
+C:\Users\hp\Desktop\Package\p1>cd..
+
+C:\Users\hp\Desktop\Package>java C1
+Error: Could not find or load main class C1
+Caused by: java.lang.NoClassDefFoundError: p1/C1 (wrong name: C1)
+
+C:\Users\hp\Desktop\Package>java p1/C1
+m1 of c1
+
+C:\Users\hp\Desktop\Package>javac C2.java
+error: file not found: C2.java
+Usage: javac <options> <source files>
+use --help for a list of possible options
+
+C:\Users\hp\Desktop\Package>javac C2.java
+C2.java:8: error: cannot find symbol
+C1 obj = new C1();
+^
+  symbol:   class C1
+  location: class C2
+C2.java:8: error: cannot find symbol
+C1 obj = new C1();
+             ^
+  symbol:   class C1
+  location: class C2
+2 errors
+
+C:\Users\hp\Desktop\Package>javac C2.java
+C2.java:2: error: package p does not exist
+import p.*;
+^
+1 error
+
+C:\Users\hp\Desktop\Package>javac C2.java
+C2.java:9: error: cannot find symbol
+C1 obj = new C1();
+^
+  symbol:   class C1
+  location: class C2
+C2.java:9: error: cannot find symbol
+C1 obj = new C1();
+             ^
+  symbol:   class C1
+  location: class C2
+2 errors
+
+C:\Users\hp\Desktop\Package>javac C2.java
+C2.java:8: error: cannot find symbol
+C1 obj = new C1();
+^
+  symbol:   class C1
+  location: class C2
+C2.java:8: error: cannot find symbol
+C1 obj = new C1();
+             ^
+  symbol:   class C1
+  location: class C2
+2 errors
+
+C:\Users\hp\Desktop\Package>javac C2.java
+
+C:\Users\hp\Desktop\Package>javac -d . C2.java
+
+C:\Users\hp\Desktop\Package>java p1/C2
+Error: Could not find or load main class p1.C2
+Caused by: java.lang.ClassNotFoundException: p1.C2
+
+C:\Users\hp\Desktop\Package>java p1/p2/C2
+m2 of c2
+
+C:\Users\hp\Desktop\Package>javac -d . C2.java
+C2.java:8: error: cannot find symbol
+C1 obj = new C1();
+^
+  symbol:   class C1
+  location: class C2
+C2.java:8: error: cannot find symbol
+C1 obj = new C1();
+             ^
+  symbol:   class C1
+  location: class C2
+2 errors
+
+C:\Users\hp\Desktop\Package>
